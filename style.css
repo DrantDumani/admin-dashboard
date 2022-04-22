@@ -128,7 +128,7 @@ img {
 }
 
 [type="search"] {
-    padding: 10px 0;
+    padding: 10px 5px;
     background-color: #ede9ef;
     border-radius: 12px;
     border: none;
@@ -159,7 +159,7 @@ img {
     border-radius: 12px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: 15px;
-    border-left: 15px solid #8ef0eb;
+    border-left: 15px solid #000490;
 }
 
 .card>h3,
