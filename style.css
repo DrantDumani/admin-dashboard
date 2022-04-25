@@ -3,7 +3,7 @@ body,
 html {
     margin: 0;
     font-family: 'Ubuntu', sans-serif;
-    height: 100vh;
+    /* min-height: 100vh; */
 }
 
 :root {
@@ -59,6 +59,7 @@ svg {
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 4fr;
+    overflow-y: hidden;
 }
 
 .nav-container {
@@ -231,11 +232,6 @@ img {
     grid-template-rows: min-content auto;
 }
 
-.news-container>h2 {
-    margin-top: 32px;
-    margin-bottom: 8px;
-}
-
 .announcement-card>p,
 .announcement-card>h4 {
     margin: 0;
@@ -287,8 +283,20 @@ hr {
 
 @media (max-width: 500px) {
     .grid-container {
-        display: grid;
-        /* flex-direction: column; */
+        display: flex;
+        flex-direction: column;
+    }
+    .sidebar-link>span,
+    .nav-title,
+    .ui-options>div:nth-child(1),
+    .ui-options>div:nth-child(2) {
+        display: none;
+    }
+    .sidebar-nav {
         grid-auto-flow: column;
+        padding: 0 20px;
+    }
+    .page-content {
+        grid-template-columns: 1fr;
     }
 }
